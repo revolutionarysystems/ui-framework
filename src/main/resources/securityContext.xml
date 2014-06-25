@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+       xmlns:util="http://www.springframework.org/schema/util"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd http://www.springframework.org/schema/util  http://www.springframework.org/schema/util/spring-util-3.1.xsd">
 
 	<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
 		<property name="securityManager" ref="securityManager"/>
@@ -18,18 +19,8 @@
 				<entry key="anAlias" value-ref="someFilter"/>
 			</util:map>
 		</property> -->
-		<property name="filterChainDefinitions">
-			<value>
-				# some example chain definitions:
-				#/admin/** = authc, roles[admin]
-				#/docs/** = authc, perms[document:read]
-                /login = anon
-                /login/** = anon
-                /doLogin = anon
-                /logout = logout
-                /refreshResources = anon
-				/** = user
-			</value>
+		<property name="filterChainDefinitionMap">
+            <util:properties location="classpath:security-filters-${security.filters}.properties"/>				
 		</property>
 	</bean>
 
