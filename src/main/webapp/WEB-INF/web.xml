@@ -12,6 +12,15 @@
     </context-param>
     
     <servlet>
+        <servlet-name>proxyServlet</servlet-name>
+        <servlet-class>uk.co.revsys.proxy.ProxyServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>proxyServlet</servlet-name>
+        <url-pattern>/p/*</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
         <servlet-name>loginServlet</servlet-name>
         <servlet-class>uk.co.revsys.user.manager.servlet.LoginServlet</servlet-class>
     </servlet>

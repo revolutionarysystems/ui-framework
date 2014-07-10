@@ -18,6 +18,10 @@
 		</property>
 	</bean>
     
+    <bean id="proxyMappings" class="uk.co.revsys.proxy.ProxyMapFactoryBean">
+        <property name="location" value="classpath:proxy.properties"/>
+    </bean>
+    
     <bean id="resourceProvider" class="uk.co.revsys.resource.repository.provider.ResourceProvider">
         <constructor-arg index="0" ref="resourceRepository"/>
         <constructor-arg index="1" value="${resources.path}"/>
