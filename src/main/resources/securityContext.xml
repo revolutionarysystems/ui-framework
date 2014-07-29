@@ -22,7 +22,7 @@
         <property name="filterChainDefinitionMap" ref="filterChainDefinitionMap"/>
     </bean>
     
-    <bean id="filterChainDefinitionMap" class="uk.co.revsys.ui.framework.OrderedPropertyMapFactoryBean">
+    <bean id="filterChainDefinitionMap" class="uk.co.revsys.utils.spring.OrderedPropertyMapFactoryBean">
         <property name="location" value="classpath:security-filters-${security.filters}.properties"/>
     </bean>
 
@@ -79,6 +79,7 @@
 		<constructor-arg index="0" ref="userDao"/>
 		<constructor-arg index="1" ref="roleService"/>
 		<constructor-arg index="2"><null/></constructor-arg>
+        <constructor-arg index="3"><null/></constructor-arg>
 	</bean>
     
     <bean id="roleService" class="uk.co.revsys.user.manager.service.RoleService">
