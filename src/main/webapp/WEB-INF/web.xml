@@ -21,12 +21,22 @@
     </servlet-mapping>
     
     <servlet>
-        <servlet-name>loginServlet</servlet-name>
-        <servlet-class>uk.co.revsys.user.manager.servlet.LoginServlet</servlet-class>
+        <servlet-name>redirectingLoginServlet</servlet-name>
+        <servlet-class>uk.co.revsys.user.manager.servlet.RedirectingLoginServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>loginServlet</servlet-name>
+        <servlet-name>redirectingLoginServlet</servlet-name>
         <url-pattern>/doLogin</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet>
+        <servlet-name>checkLoginServlet</servlet-name>
+        <servlet-class>uk.co.revsys.user.manager.servlet.SimpleLoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>checkLoginServlet</servlet-name>
+        <url-pattern>/checkLogin</url-pattern>
     </servlet-mapping>
     
     <servlet>
