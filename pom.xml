@@ -4,7 +4,7 @@
 	<groupId>uk.co.revsys</groupId>
 	<artifactId>ui-framework</artifactId>
 	<packaging>war</packaging>
-	<version>0.2.0-SNAPSHOT</version>
+	<version>0.1.0</version>
 	<name>UI Framework</name>
 	<description>UI Framework</description>
 	
@@ -144,37 +144,37 @@
         <dependency>
             <groupId>uk.co.revsys.utils</groupId>
             <artifactId>spring-utils</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
+            <version>0.1.0</version>
         </dependency>
         
         <dependency>
             <groupId>uk.co.revsys.user-manager</groupId>
             <artifactId>user-manager-core</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
+            <version>0.1.0</version>
         </dependency>
         
         <dependency>
             <groupId>uk.co.revsys.user-manager</groupId>
             <artifactId>user-manager-mongo</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
+            <version>0.1.0</version>
         </dependency>
         
         <dependency>
             <groupId>uk.co.revsys.resource-repository</groupId>
             <artifactId>resource-repository-provider</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
+            <version>0.1.0</version>
         </dependency>
         
         <dependency>
             <groupId>uk.co.revsys.resource-repository</groupId>
             <artifactId>resource-repository-provider-servlet</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
+            <version>0.1.0</version>
         </dependency>
         
         <dependency>
             <groupId>uk.co.revsys.resource-repository</groupId>
             <artifactId>resource-repository-cloud</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
+            <version>0.1.0</version>
         </dependency>
         
         <dependency>
@@ -186,7 +186,7 @@
         <dependency>
             <groupId>uk.co.revsys.proxy</groupId>
             <artifactId>proxy-core</artifactId>
-            <version>0.1.0-SNAPSHOT</version>
+            <version>0.1.0</version>
         </dependency>
         
         <dependency>
