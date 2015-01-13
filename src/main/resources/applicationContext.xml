@@ -26,7 +26,7 @@
         <constructor-arg index="0" ref="resourceRepository"/>
         <constructor-arg index="1" value="${resources.path}"/>
         <constructor-arg index="2" ref="resourceFilter"/>
-        <constructor-arg index="3" ref="resourceLoader"/>
+        <constructor-arg index="3" ref="zipResourceLoader"/>
     </bean>
     
     <bean id="resourceRepositoryFactory" class="uk.co.revsys.resource.repository.ResourceRepositoryFactory">
@@ -54,6 +54,10 @@
     </bean>
     
     <bean id="resourceFilter" class="uk.co.revsys.resource.repository.provider.filter.AcceptAllResourceFilter"/>
+    
+    <bean id="zipResourceLoader" class="uk.co.revsys.resource.repository.provider.handler.UnzippingResourceHandler">
+        <constructor-arg index="0" ref="resourceLoader"/>
+    </bean>
     
     <bean id="resourceLoader" class="uk.co.revsys.ui.framework.WebappResourceLoader"/>
 </beans>
