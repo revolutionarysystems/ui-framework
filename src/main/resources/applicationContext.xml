@@ -55,7 +55,7 @@
     
     <bean id="resourceFilter" class="uk.co.revsys.resource.repository.provider.filter.AcceptAllResourceFilter"/>
     
-    <bean id="zipResourceLoader" class="uk.co.revsys.resource.repository.provider.handler.UnzippingResourceHandler">
+    <bean id="zipResourceLoader" class="uk.co.revsys.resource.repository.provider.handler.TarGZResourceHandler">
         <constructor-arg index="0" ref="resourceLoader"/>
     </bean>
     
