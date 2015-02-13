@@ -7,8 +7,8 @@
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>
-			/WEB-INF/classes/applicationContext.xml
-		</param-value>
+            /WEB-INF/classes/applicationContext.xml
+        </param-value>
     </context-param>
     
     <servlet>
@@ -49,31 +49,45 @@
     </servlet-mapping>
     
     <servlet>
-		<servlet-name>refreshResourcesServlet</servlet-name>
-		<servlet-class>uk.co.revsys.resource.repository.provider.servlet.ResourceRefreshServlet</servlet-class>
-	</servlet>
+        <servlet-name>refreshResourcesServlet</servlet-name>
+        <servlet-class>uk.co.revsys.resource.repository.provider.servlet.ResourceRefreshServlet</servlet-class>
+    </servlet>
 
-	<servlet-mapping>
-		<servlet-name>refreshResourcesServlet</servlet-name>
-		<url-pattern>/refreshResources</url-pattern>
-	</servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>refreshResourcesServlet</servlet-name>
+        <url-pattern>/refreshResources</url-pattern>
+    </servlet-mapping>
     
     <filter>
-		<filter-name>shiroFilter</filter-name>
-		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
-		<init-param>
-			<param-name>targetFilterLifecycle</param-name>
-			<param-value>true</param-value>
-		</init-param>
-	</filter>
+        <filter-name>DisableUrlSessionFilter</filter-name>
+        <filter-class>uk.co.revsys.user.manager.filter.DisableUrlSessionFilter</filter-class>
+    </filter>
 
-	<filter-mapping>
-		<filter-name>shiroFilter</filter-name>
-		<url-pattern>/*</url-pattern>
-	</filter-mapping>
+    <filter-mapping>
+        <filter-name>DisableUrlSessionFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    
+    <filter>
+        <filter-name>shiroFilter</filter-name>
+        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+        <init-param>
+            <param-name>targetFilterLifecycle</param-name>
+            <param-value>true</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>shiroFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
     
     <session-config>
         <tracking-mode>COOKIE</tracking-mode>
     </session-config>
     
+
+
+...
+
 </web-app>
