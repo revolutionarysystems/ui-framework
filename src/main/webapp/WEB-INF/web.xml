@@ -40,6 +40,15 @@
     </servlet-mapping>
     
     <servlet>
+        <servlet-name>accountShieldLoginServlet</servlet-name>
+        <servlet-class>uk.co.revsys.account.shield.user.manager.SimpleLoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>accountShieldLoginServlet</servlet-name>
+        <url-pattern>/asLogin</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
         <servlet-name>userServlet</servlet-name>
         <servlet-class>uk.co.revsys.user.manager.servlet.UserServlet</servlet-class>
     </servlet>
