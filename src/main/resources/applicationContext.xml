@@ -63,8 +63,7 @@
     
     <bean id="accountShieldClient" class="uk.co.revsys.account.shield.AccountShieldClientImpl">
         <constructor-arg index="0" value="${as.url}"/>
-        <constructor-arg index="1" value="${as.account}"/>
-        <constructor-arg index="2" value="${as.username}"/>
-        <constructor-arg index="3" value="${as.password}"/>
+        <constructor-arg index="1" value="${as.username}"/>
+        <constructor-arg index="2" value="${as.password}"/>
     </bean>
 </beans>
